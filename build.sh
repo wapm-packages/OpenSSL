@@ -32,6 +32,7 @@ emcc apps/app_rand.o apps/apps.o apps/asn1pars.o apps/ca.o apps/ciphers.o \
   apps/sess_id.o apps/smime.o apps/speed.o apps/spkac.o apps/srp.o apps/ts.o \
   apps/verify.o apps/version.o apps/x509.o libssl.a libcrypto.a \
   -o ${PREFIX}/openssl.wasm \
+  -s ALLOW_MEMORY_GROWTH=1 \
   -s ERROR_ON_UNDEFINED_SYMBOLS=0
 
 cd ..
