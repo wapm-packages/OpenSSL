@@ -1,2 +1,3 @@
 *.wasm
 include/
+wapm_packages/
