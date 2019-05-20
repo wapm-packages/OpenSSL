@@ -12,6 +12,7 @@ You can run OpenSSL cli
 
 ```shell
 $ wapm run openssl
+OpenSSL>
 ```
 
 ## Building from Source
