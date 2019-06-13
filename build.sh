@@ -9,7 +9,7 @@ wget https://www.openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz
 tar xf openssl-${OPENSSL_VERSION}.tar.gz
 cd openssl-${OPENSSL_VERSION}
 
-emconfigure ./Configure linux-generic64 --prefix=${PREFIX}
+emconfigure ./Configure linux-x32 -no-asm -no-threads --prefix=${PREFIX} || exit $?
 
 sed -i 's|^CROSS_COMPILE.*$|CROSS_COMPILE=|g' Makefile
 
