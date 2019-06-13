@@ -13,7 +13,7 @@ cd openssl-${OPENSSL_VERSION}
 
 echo "Configure"
 make clean
-emconfigure ./Configure linux-x32 -no-asm -no-threads --prefix=${PREFIX} || exit $?
+emconfigure ./Configure linux-x32 -no-asm -no-threads || exit $?
 
 sed -i 's|^CROSS_COMPILE.*$|CROSS_COMPILE=|g' Makefile
 
