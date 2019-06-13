@@ -10,6 +10,16 @@ name = "openssl"
 source = "openssl.wasm"
 abi = "emscripten"
 
+[[module]]
+name = "libcrypto"
+source = "libcrypto.wasm"
+abi = "emscripten"
+
+[[module]]
+name = "libssl"
+source = "libssl.wasm"
+abi = "emscripten"
+
 [[command]]
 name = "openssl"
 module = "openssl"
