@@ -1,6 +1,6 @@
 [package]
 name = "openssl"
-version = "0.1.0"
+version = "0.2.0"
 description = "OpenSSL is a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols"
 readme = "README.md"
 repository = "https://github.com/wapm-packages/OpenSSL"
@@ -8,17 +8,18 @@ repository = "https://github.com/wapm-packages/OpenSSL"
 [[module]]
 name = "openssl"
 source = "openssl.wasm"
-abi = "emscripten"
+abi = "wasi"
 
-[[module]]
-name = "libcrypto"
-source = "libcrypto.wasm"
-abi = "emscripten"
+[module.interfaces]
+wasi = "0.0.0-unstable"
 
-[[module]]
-name = "libssl"
-source = "libssl.wasm"
-abi = "emscripten"
+# [[module]]
+# name = "libcrypto"
+# source = "libcrypto.wasm"
+
+# [[module]]
+# name = "libssl"
+# source = "libssl.wasm"
 
 [[command]]
 name = "openssl"

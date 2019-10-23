@@ -17,12 +17,12 @@ OpenSSL>
 
 ## Building from Source
 
-You will need Emscripten SDK (emsdk) to build the `openssl.wasm` file.
+You will need [Wasienv](https://github.com/wasienv/wasienv) to build the `openssl.wasm` file.
 
 Steps:
 
-1. Setup emsdk (>= 1.38.11), see
-   [Installation Instructions](https://github.com/juj/emsdk#installation-instructions)
+1. Setup wasienv, see
+   [Installation Instructions](https://github.com/wasienv/wasienv)
 2. Run `./build.sh`
 
 Build script inspired by
